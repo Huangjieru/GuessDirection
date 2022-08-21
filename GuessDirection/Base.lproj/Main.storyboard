@@ -196,7 +196,8 @@
                                 <rect key="frame" x="148" y="566" width="118" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Replay" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Replay" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background"/>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
