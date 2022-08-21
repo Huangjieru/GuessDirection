@@ -37,11 +37,11 @@ class SingleViewController: UIViewController {
     
     
     @IBAction func play(_ sender: UIButton) {
-        //亂數選擇方向
+        //亂數從陣列中選擇方向
         let direction = directions.randomElement()!
-        //顯示亂數選擇方向的圖片，圖片名稱與陣列裡的名稱相同
+        //顯示亂數選擇方向的圖片，圖片名稱與陣列裡的圖片名稱相同
         computerResultImageView.image = UIImage(named: direction)
-        //電腦選號與選擇的按鈕相同就贏得比賽。
+        //選擇的方向與電腦相同就贏得比賽。
         var isWin = false
         
         switch sender{
@@ -78,8 +78,9 @@ class SingleViewController: UIViewController {
             scoreLabel.text = "\(score)"
             chance -= 1
         }
-        //五次機會玩完就結束遊戲，將按鈕全部隱藏
+        //顯示可玩次數
         chanceLabel.text = "\(chance)"
+        //五次機會玩完就結束遊戲，將按鈕全部隱藏
         if chance == 0{
             resultLabel.text = "Game Over"
             upButton.isHidden = true
@@ -92,7 +93,7 @@ class SingleViewController: UIViewController {
     }
     //重新開始遊戲
     @IBAction func replay(_ sender: UIButton) {
-        //顯示所得的分數。用設定segue設定id到下一頁(ResulteViewController)
+        //顯示所得的分數。用設定segue設定id到下一頁(ResultViewController)
         performSegue(withIdentifier: "singleVCManual", sender: nil)
         //看完所得分數，玩家按下Replay後返回此頁，一切從新開始
         resultLabel.text = "Guess Direction"

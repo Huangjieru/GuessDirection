@@ -10,12 +10,13 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var scoreLabel: UILabel!
+    //前一頁得分結果存入此屬性
     var yourScore = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //得分結果呈現於畫面上
         scoreLabel.text = yourScore
     }
 
@@ -30,7 +31,7 @@ class ResultViewController: UIViewController {
     /*
     <方法二>
     藉由button回到前一頁（SingleViewController）
-    輸入segue的id(backToSingleViewController)回到指定頁面（SingleViewController）
+    輸入segue的id(backToSingleViewController)回到頁面（SingleViewController）
     @IBAction func back(_ sender: Any) {
         performSegue(withIdentifier: "backToSingleViewController", sender: nil)
     }
